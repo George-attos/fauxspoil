@@ -7,13 +7,15 @@ const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY || '')
 export async function POST(request: Request) {
   try {
     const { showName, intensity } = await request.json()
+    const rawShowName = typeof showName === 'string' ? showName : ''
+    const normalizedShowName = rawShowName.trim() || 'a random popular TV series'
     
     if (!process.env.GEMINI_API_KEY) {
       throw new Error('Gemini API key not configured')
     }
 
-    // Get the generative model
-    const model = genAI.getGenerativeModel({ model: 'gemini-pro' })
+    // Get the generative model (use a supported Gemini model)
+    const model = genAI.getGenerativeModel({ model: 'gemini-1.5-flash' })
 
     // Create intensity-specific prompts
     const intensityPrompts = {
@@ -25,7 +27,7 @@ export async function POST(request: Request) {
     const intensityPrompt = intensityPrompts[intensity as keyof typeof intensityPrompts] || intensityPrompts.mild
 
     // Construct the prompt
-    const prompt = `Provide me a fake spoiler for "${showName}" such that it feels very authentic and inline with the original plot that it feels very easy to believe. ${intensityPrompt}
+    const prompt = `Provide me a fake spoiler for "${normalizedShowName}" such that it feels very authentic and inline with the original plot that it feels very easy to believe. ${intensityPrompt}
 
 Requirements:
 - Make it sound like a real spoiler someone would leak
@@ -43,11 +45,12 @@ Spoiler:`
     const spoilerText = response.text()
 
     // Check if it might be an upcoming season/episode
-    const isUpcoming = showName.toLowerCase().includes('season') && 
-                      (showName.includes('5') || showName.includes('6') || showName.includes('7') || 
-                       showName.includes('8') || showName.includes('9') || showName.includes('10') ||
-                       showName.toLowerCase().includes('five') || showName.toLowerCase().includes('six') ||
-                       showName.toLowerCase().includes('seven') || showName.toLowerCase().includes('eight'))
+    const lowerShowName = normalizedShowName.toLowerCase()
+    const isUpcoming = lowerShowName.includes('season') && 
+                      (lowerShowName.includes('5') || lowerShowName.includes('6') || lowerShowName.includes('7') || 
+                       lowerShowName.includes('8') || lowerShowName.includes('9') || lowerShowName.includes('10') ||
+                       lowerShowName.includes('five') || lowerShowName.includes('six') ||
+                       lowerShowName.includes('seven') || lowerShowName.includes('eight'))
 
     return NextResponse.json({
       spoiler: spoilerText.trim(),

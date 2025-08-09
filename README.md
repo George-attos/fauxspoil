@@ -1,69 +1,96 @@
-FauxSpoiler 🎯
-Basic Details
-Team Name: BitBrewers
+# FauxSpoiler 🎯  
 
-Team Members
+## Basic Details  
+**Team Name:** BitBrewers  
 
-Team Lead: George Attokkaran – CCE
+**Team Members**  
+- **Team Lead:** George Attokkaran – CCE  
+- **Member 2:** Michel Treasa Saji – CCE  
 
-Member 2: Michel Treasa Saji – CCE
+---
 
-Project Description
-FauxSpoiler is an AI-powered mischief machine that creates absurd yet terrifyingly realistic fake spoilers for movies and TV shows — from Hollywood blockbusters to niche Malayalam dramas.
+## Project Description  
+**FauxSpoiler** is an AI-powered mischief machine that creates absurd yet terrifyingly realistic fake spoilers for movies and TV shows.
+---
 
-The Problem (that doesn't exist)
-The world suffers from a tragic lack of suspense. People binge-watch in peace, knowing the only spoilers are real ones. This tranquility is unacceptable.
+## The Problem (that doesn't exist)  
+The world suffers from a tragic lack of suspense. People binge-watch in peace, knowing the only spoilers are real ones. This tranquility is unacceptable.  
 
-The Solution (that nobody asked for)
-We weaponized AI to instantly fabricate spoilers so authentic-sounding that even the original screenwriters might start doubting their own plotlines.
+---
 
-Technical Details
-Technologies/Components Used
-For Software:
+## The Solution (that nobody asked for)  
+We weaponized AI to instantly fabricate spoilers so authentic-sounding that even the original screenwriters might start doubting their own plotlines.  
 
-Languages: JavaScript, TypeScript
+---
 
-Frameworks: Next.js
+## Technical Details  
 
-APIs: Gemini API (Google Generative AI), IMDb API (via RapidAPI)
+### Technologies/Components Used  
 
-Tools: Vercel (deployment), Git (version control)
+**For Software:**  
+- **Languages:** JavaScript, TypeScript  
+- **Frameworks:** Next.js  
+- **APIs:** Gemini API (Google Generative AI), IMDb API (via RapidAPI)  
+- **Tools:** Vercel (deployment), Git (version control)  
 
-For Hardware:
+**For Hardware:**  
+- None — except our overcaffeinated laptops and slightly concerned friends.  
 
-None — except our overcaffeinated laptops and slightly concerned friends.
+---
 
-Implementation
-For Software
-Installation
+## Implementation  
 
-bash
-Copy
-Edit
+### For Software  
+
+**Installation**  
+```bash
 git clone https://github.com/[username]/fauxspoiler.git
 cd fauxspoiler
 npm install
-Run
+```
 
-bash
-Copy
-Edit
+**Run**  
+```bash
 npm run dev
-Project Documentation
-Screenshots
-The innocent-looking homepage where chaos begins.
+```
 
-A totally fabricated spoiler so believable it could end friendships.
+---
 
-The “Oh no, I sent that to the wrong group” moment.
+## Project Documentation  
 
-Diagrams
-From “Enter title” → AI magic → “Friendship destroyed.”
+### Screenshots  
+![Screenshot1](link) *The innocent-looking homepage where chaos begins.*  
 
-Project Demo
-Video: Demo Link – Watch us turn harmless pop culture into weapons of misinformation.
+![Screenshot2](link) *A totally fabricated spoiler so believable it could end friendships.*  
 
-Team Contributions
-George Attokkaran: Team lead, frontend design, API integration, spoiler creativity
+![Screenshot3](link) *The “Oh no, I sent that to the wrong group” moment.*  
 
-Michel Treasa Saji: UI styling, feature testing, feedback refinement
+---
+
+### Diagrams  
+1. User Input
+    User enters the movie/series name (and optionally season/episode) into the UI.
+
+2. Fetch Plot Summary (IMDb API)
+    The project sends the title to the IMDb API via RapidAPI.
+    The IMDb API returns the official plot summary of the given title.
+
+3. Generate Fake Spoiler (Gemini API)
+    The original user input and the retrieved plot summary are both sent to Gemini API.
+    Gemini processes the data and fabricates a believable but fake spoiler while staying aligned with the actual plot style.
+
+4. Output to User
+    The generated fake spoiler is sent back to the UI.
+    User sees their “spoiler” and (optionally) shares it with friends to cause confusion. 
+
+---
+
+## Project Demo  
+
+**Video:** [Demo Link](link) – Watch us turn harmless pop culture into weapons of misinformation.  
+
+---
+
+## Team Contributions  
+- **George Attokkaran:** Team lead, frontend design, API integration, spoiler creativity  
+- **Michel Treasa Saji:** UI styling, feature testing, feedback refinement  

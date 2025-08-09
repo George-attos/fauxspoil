@@ -69,17 +69,21 @@ npm run dev
 
 ### Diagrams  
 1. User Input
+
     User enters the movie/series name (and optionally season/episode) into the UI.
 
 2. Fetch Plot Summary (IMDb API)
+
     The project sends the title to the IMDb API via RapidAPI.
     The IMDb API returns the official plot summary of the given title.
 
 3. Generate Fake Spoiler (Gemini API)
+
     The original user input and the retrieved plot summary are both sent to Gemini API.
     Gemini processes the data and fabricates a believable but fake spoiler while staying aligned with the actual plot style.
 
 4. Output to User
+
     The generated fake spoiler is sent back to the UI.
     User sees their “spoiler” and (optionally) shares it with friends to cause confusion. 
 

@@ -1,30 +1,69 @@
-# FauxSpoil web app
+FauxSpoiler 🎯
+Basic Details
+Team Name: BitBrewers
 
-*Automatically synced with your [v0.dev](https://v0.dev) deployments*
+Team Members
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/george-attos-projects/v0-faux-spoil-web-app)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.dev-black?style=for-the-badge)](https://v0.dev/chat/projects/MskPNZ498CH)
+Team Lead: George Attokkaran – CCE
 
-## Overview
+Member 2: Michel Treasa Saji – CCE
 
-This repository will stay in sync with your deployed chats on [v0.dev](https://v0.dev).
-Any changes you make to your deployed app will be automatically pushed to this repository from [v0.dev](https://v0.dev).
+Project Description
+FauxSpoiler is an AI-powered mischief machine that creates absurd yet terrifyingly realistic fake spoilers for movies and TV shows — from Hollywood blockbusters to niche Malayalam dramas.
 
-## Deployment
+The Problem (that doesn't exist)
+The world suffers from a tragic lack of suspense. People binge-watch in peace, knowing the only spoilers are real ones. This tranquility is unacceptable.
 
-Your project is live at:
+The Solution (that nobody asked for)
+We weaponized AI to instantly fabricate spoilers so authentic-sounding that even the original screenwriters might start doubting their own plotlines.
 
-**[https://vercel.com/george-attos-projects/v0-faux-spoil-web-app](https://vercel.com/george-attos-projects/v0-faux-spoil-web-app)**
+Technical Details
+Technologies/Components Used
+For Software:
 
-## Build your app
+Languages: JavaScript, TypeScript
 
-Continue building your app on:
+Frameworks: Next.js
 
-**[https://v0.dev/chat/projects/MskPNZ498CH](https://v0.dev/chat/projects/MskPNZ498CH)**
+APIs: Gemini API (Google Generative AI), IMDb API (via RapidAPI)
 
-## How It Works
+Tools: Vercel (deployment), Git (version control)
 
-1. Create and modify your project using [v0.dev](https://v0.dev)
-2. Deploy your chats from the v0 interface
-3. Changes are automatically pushed to this repository
-4. Vercel deploys the latest version from this repository
+For Hardware:
+
+None — except our overcaffeinated laptops and slightly concerned friends.
+
+Implementation
+For Software
+Installation
+
+bash
+Copy
+Edit
+git clone https://github.com/[username]/fauxspoiler.git
+cd fauxspoiler
+npm install
+Run
+
+bash
+Copy
+Edit
+npm run dev
+Project Documentation
+Screenshots
+The innocent-looking homepage where chaos begins.
+
+A totally fabricated spoiler so believable it could end friendships.
+
+The “Oh no, I sent that to the wrong group” moment.
+
+Diagrams
+From “Enter title” → AI magic → “Friendship destroyed.”
+
+Project Demo
+Video: Demo Link – Watch us turn harmless pop culture into weapons of misinformation.
+
+Team Contributions
+George Attokkaran: Team lead, frontend design, API integration, spoiler creativity
+
+Michel Treasa Saji: UI styling, feature testing, feedback refinement
